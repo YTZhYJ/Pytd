@@ -34,25 +34,7 @@
     </package>
     
     <!-- 包配置 -->
-    <package name="test_action" extends="struts-default">
-   		<!-- name使用于请求的 ，class于applicationContext-action.xml配置的id属性对应，method对应的是action类中函数 -->
-    	<action name="test" class="testAction" method="test">
-    		<result name="success">test/haha.jsp</result>
-    	</action>
-    </package>
     
-    <package name="common"  extends="struts-default"> 
-        <action name="codeSub" class="loginAction" method="loginValidation">
-        	<result name="success">/test/haha.jsp</result> 
-        	<result name="error">/index.jsp</result> 
-        </action>
-        <action name="createCode" class="loginAction" method="createCode">
-        </action>
-    	<action name="quickResponseCodeImage" class="quickResponseCodeAction" method="quickResponseCodeImage">
-    	</action>
-    </package> 
     
-    <package name="quickResponseCode" extends="struts-default">
-    </package>
     
 </struts>    

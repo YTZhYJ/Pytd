@@ -17,7 +17,7 @@
 	<bean id="authUserBiz" class="com.pytd.db.biz.impl.AuthUserBizImpl">
 		<property name="authUserDao" ref="authUserDao"></property>
 	</bean>
-	<bean id="authUserAction" class="com.pytd.db.actions.AuthUserAction">
+	<bean id="authUserAction" class="com.pytd.db.action.AuthUserAction">
 		<!-- property 的name相当于get方法， ref指向是指Service的bean中的id值-->
 		<property name="authUserBiz" ref="authUserBiz"></property>
 	</bean>
