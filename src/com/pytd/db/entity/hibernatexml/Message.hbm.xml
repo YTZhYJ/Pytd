@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.pytd.db.entity">
+ 	<class name="Message" table="Message">
+  		<id column="id" name="id">
+  			<generator class="native"></generator><!-- 自增长 -->
+  		</id>
+  		<property column="title" generated="never" lazy="false" name="title" type="string"></property>
+  		<many-to-one name="sequence" column="sequence_id" cascade="persist" lazy="false" not-found="ignore" class="DictSequence"></many-to-one>
+  		<property column="content" generated="never" lazy="false" name="content" type="text"></property>
+		<property column="releaseTime" name="releaseTime" generated="never" lazy="false" type="timestamp"></property>
+		<many-to-one name="operator" column="operator_id" cascade="persist" lazy="false" not-found="ignore" class="AuthUser"></many-to-one>
+		<property column="attachment" generated="never" lazy="false" name="attachment" type="string"></property>	
+ 	</class>
+</hibernate-mapping>

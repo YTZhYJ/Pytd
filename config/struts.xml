@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+ 	<constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.ui.theme" value="simple"/> 
+    <constant name="struts.multipart.maxSize" value="1070109600"/>
+    
+    
+    <!-- 拦截器包 -->
+    <package name="interceptor"  namespace="/" extends="struts-default">
+		<!-- 定义新的拦截器 -->
+		<interceptors>
+			<!-- 定义新的拦截器 -->
+			<interceptor name="loginInterceptor" class="com.pytd.interceptors.LoginInterceptor"></interceptor>
+			<interceptor name="authInterceptor" class="com.pytd.interceptors.AuthInterceptor"></interceptor>
+			<!-- 使用新的拦截器栈 -->
+			<interceptor-stack name="basicInterceptorStack">
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="loginInterceptor">
+					<!-- 不进行过滤的方法 -->
+					<param name="excludeMethods">login,logout,register</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 定义默认拦截栈 -->
+	 	<default-interceptor-ref name="basicInterceptorStack"></default-interceptor-ref>
+    	<!-- 设置全局的Login -->
+    	<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+    </package>
+    
+    <!-- 包配置 -->
+    <package name="test_action" extends="struts-default">
+   		<!-- name使用于请求的 ，class于applicationContext-action.xml配置的id属性对应，method对应的是action类中函数 -->
+    	<action name="test" class="testAction" method="test">
+    		<result name="success">test/haha.jsp</result>
+    	</action>
+    </package>
+    
+    <package name="common"  extends="struts-default"> 
+        <action name="codeSub" class="loginAction" method="loginValidation">
+        	<result name="success">/test/haha.jsp</result> 
+        	<result name="error">/index.jsp</result> 
+        </action>
+        <action name="createCode" class="loginAction" method="createCode">
+        </action>
+    	<action name="quickResponseCodeImage" class="quickResponseCodeAction" method="quickResponseCodeImage">
+    	</action>
+    </package> 
+    
+    <package name="quickResponseCode" extends="struts-default">
+    </package>
+    
+</struts>    

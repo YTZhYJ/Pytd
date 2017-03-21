@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.pytd.db.entity">
+ 	<class name="Contact" table="Contact">
+  		<id column="id" name="id">
+  			<generator class="native"></generator><!-- 自增长 -->
+  		</id>
+  		<property column="title" generated="never" lazy="false" name="title" type="string"></property>
+  		<property column="content" generated="never" lazy="false" name="content" type="text"></property>
+		<property column="submitTime" name="submitTime" generated="never" lazy="false" type="timestamp"></property>
+		<property column="operateTime" name="operateTime" generated="never" lazy="false" type="timestamp"></property>
+  		<property column="contacts" generated="never" lazy="false" name="contacts" type="string"></property>
+		<many-to-one name="user" column="user_id" cascade="persist" lazy="false" not-found="ignore" class="ClientUser"></many-to-one>
+ 	</class>
+</hibernate-mapping>

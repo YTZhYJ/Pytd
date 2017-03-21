@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.pytd.db.entity">
+ 	<class name="ModuleMenu" table="Module_Menu">
+  		<id column="id" name="id">
+  			<generator class="native"></generator><!-- 自增长 -->
+  		</id>
+  		
+  		<many-to-one column="father_id" name="father" cascade="persist" lazy="false" not-found="ignore" class="ModuleMenu"></many-to-one>
+  		<property column="url" generated="never" lazy="false" name="url" type="string"></property>
+  		<property column="name_EN" generated="never" lazy="false" name="name_EN" type="string"></property>
+		<property column="name_CN" name="name_CN" generated="never" lazy="false" type="string"></property>
+		<property column="sequence" generated="never" lazy="false" name="sequence" type="string"></property>	
+		<property column="viewable" generated="never" lazy="false" name="viewable" type="boolean"></property>
+		
+ 	</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.pytd.db.entity">
+	<class name="AuthUser" table="Auth_User">
+		<id column="id" name="id">
+			<generator class="native"></generator>
+		</id>
+  		<property column="account" generated="never" lazy="false" name="account" type="string"/>
+  		<property column="password" generated="never" lazy="false" name="password" type="string"/>
+  		<many-to-one name="department" column="department_id" cascade="persist" lazy="false" not-found="ignore" class="DictDepartment"></many-to-one>
+  		<property column="realName" generated="never" lazy="false" name="realName" type="string"/>
+  		<many-to-one name="gender" column="gender_id" cascade="persist" lazy="false" not-found="ignore" class="DictGender"></many-to-one>
+  		<property column="mobilePhone" generated="never" lazy="false" name="mobilePhone" type="long"/>
+  		<property column="festnetzNumber" generated="never" lazy="false" name="festnetzNumber" type="long"/>
+  		<property column="isActive" generated="never" lazy="false" name="isActive" type="boolean"/>
+  		<property column="del" generated="never" lazy="false" name="del" type="boolean"/>
+  		<property column="descr" generated="never" lazy="false" name="descr" type="string"/>
+ 	</class>
+</hibernate-mapping>

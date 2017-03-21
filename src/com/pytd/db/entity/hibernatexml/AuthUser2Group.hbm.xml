@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.pytd.db.entity">
+	<class name="AuthPermission2Group" table="Auth_Permission2Group">
+		<id column="id" name="id">
+			<generator class="native"></generator>
+		</id>
+		<many-to-one name="permission" column="permission_id" cascade="persist" lazy="false" not-found="exception" class="AuthPermission"></many-to-one>
+		<many-to-one name="group" column="group_id" cascade="persist" lazy="false" not-found="exception" class="AuthGroup"></many-to-one>
+		<property column="createTime" name="createTime" generated="never" lazy="false" type="timestamp"></property>
+		<property column="descr" generated="never" lazy="false" name="descr" type="string"></property>	
+ 	</class>
+</hibernate-mapping>

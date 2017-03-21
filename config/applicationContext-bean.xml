@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 用于搭建服务的层级关系 -->
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd" xmlns:tx="http://www.springframework.org/schema/tx">
+	
+	<!-- Auth_User -->
+	<bean id="authUserDao" class="com.pytd.db.dao.impl.AuthUserDaoImpl"></bean>
+	<!-- property 的name相当于get方法，ref 指向是指DAO中bean的id值-->
+	<bean id="authUserBiz" class="com.pytd.db.biz.impl.AuthUserBizImpl">
+		<property name="authUserDao" ref="authUserDao"></property>
+	</bean>
+	<bean id="authUserAction" class="com.pytd.db.actions.AuthUserAction">
+		<!-- property 的name相当于get方法， ref指向是指Service的bean中的id值-->
+		<property name="authUserBiz" ref="authUserBiz"></property>
+	</bean>
+	
+	<!--  -->
+	
+	
+	
+	
+</beans>

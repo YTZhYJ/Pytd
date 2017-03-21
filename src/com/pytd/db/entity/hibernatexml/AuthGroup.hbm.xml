@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.pytd.db.entity">
+	<class name="AuthGroup" table="Auth_Group">
+		<id column="id" name="id">
+			<generator class="native"></generator>
+		</id>
+  		<property column="code" generated="never" lazy="false" name="code" type="string"/>
+  		<property column="name_CN" generated="never" lazy="false" name="name_CN" type="string"/>
+  		<property column="name_EN" generated="never" lazy="false" name="name_EN" type="string"/>
+		<property column="createTime" name="createTime" generated="never" lazy="false" type="timestamp"></property>
+		<property column="descr" generated="never" lazy="false" name="descr" type="string"></property>	
+ 	</class>
+</hibernate-mapping>

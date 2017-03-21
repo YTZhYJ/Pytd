@@ -1,0 +1,17 @@
+#MyEclipse Hibernate Properties
+#Tue Mar 21 19:01:40 CST 2017
+genVersionTag=false
+sessionFactoryName=com.pytd.main.HibernateSessionFactory
+genAnnotations=false
+configFile=/Gypsophila/config/hibernate.cfg.xml
+reStrategyClass=
+sessionFactoryId=
+profile=
+detectM2M=false
+genBasicCompId=false
+keyGenerator=
+createConfigFile=true
+basePersistenceClass=
+detectO2O=false
+useJavaTypes=true
+reSettingsFile=
