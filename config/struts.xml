@@ -8,36 +8,48 @@
     <constant name="struts.ui.theme" value="simple"/> 
     <constant name="struts.multipart.maxSize" value="1070109600"/>
     
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <!-- 处于开发模式 -->
+    <constant name="struts.devMode" value="true" />
     
     <!-- 拦截器包 -->
-    <!-- <package name="interceptor"  namespace="/" extends="struts-default">
-		定义新的拦截器
+    <package name="interceptor"  namespace="/" extends="struts-default">
+		<!-- 定义新的拦截器 -->
 		<interceptors>
-			定义新的拦截器
+			<!--定义新的拦截器 -->
 			<interceptor name="loginInterceptor" class="com.pytd.interceptors.LoginInterceptor"></interceptor>
 			<interceptor name="authInterceptor" class="com.pytd.interceptors.AuthInterceptor"></interceptor>
-			使用新的拦截器栈
+			<!--使用新的拦截器栈 -->
 			<interceptor-stack name="basicInterceptorStack">
                 <interceptor-ref name="defaultStack"></interceptor-ref>
 				<interceptor-ref name="loginInterceptor">
-					不进行过滤的方法
+					<!--不进行过滤的方法 -->
 					<param name="excludeMethods">login,logout,register</param>
 				</interceptor-ref>
 			</interceptor-stack>
 		</interceptors>
-		定义默认拦截栈
+		<!--定义默认拦截栈 -->
 	 	<default-interceptor-ref name="basicInterceptorStack"></default-interceptor-ref>
-    	设置全局的Login
+    	<!--设置全局的Login -->
     	<global-results>
 			<result name="login">/login.jsp</result>
 		</global-results>
-    </package> -->
-    
-    <!-- 包配置 -->
-    <package name="auth" namespace="/" extends="struts-default">
+		
+		
+		
         <action name="authAction" class="com.pytd.db.action.AuthUserAction" method="{1}">
     		<result name="error">/register.jsp</result>
     	</action>
+		
+       	<!-- 登录部分 -->
+       	<action name="loginAction" class="AuthUserLoginAction" method="execute">
+        	<result name="success" type="redirect">iframePages/index.jsp</result>
+       		<result name="error" type="redirect">/login.html</result>
+       	</action>
+        <action name="logoutAction" class="loginaction" method="logout">
+        	<result name="success" type="redirect">/login.html</result>
+        </action>  
+        
     </package>
     
     

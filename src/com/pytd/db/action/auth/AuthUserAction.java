@@ -1,4 +1,4 @@
-package com.pytd.db.action;
+package com.pytd.db.action.auth;
 
 import com.pytd.db.biz.AuthUserBiz;
 import com.pytd.db.entity.AuthUser;
@@ -14,8 +14,5 @@ public class AuthUserAction {
 		this.authUserBiz = authUserBiz;
 	}
 	
-	public AuthUser getAuthUserById(Long id){
-		return null;
-	}
 	
 }

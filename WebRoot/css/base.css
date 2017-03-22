@@ -1,0 +1,100 @@
+/*Login Layout CSS*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+img{
+	border: 0px;
+}
+.button{
+	width: 320px;
+	height: 38px;
+	margin: 20 auto;
+	display: block;
+	cursor: pointer;
+}
+.button input{
+	width: 100px;
+	height: 28px;
+	color: black;
+	display: block;
+	text-decoration: none;/*去掉下划线*/
+	text-align: center;
+	line-height: 28px;
+	border-radius: 3px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	margin: 5px 10px;
+	float: left;
+}
+.button input:hover{
+	transition: all 0.9s case-in-out;
+	box-shadow: 0 0 9px gray;
+}
+.button a{
+	width: 100px;
+	height: 28px;
+	color: black;
+	display: block;
+	text-decoration: none;/*去掉下划线*/
+	text-align: center;
+	line-height: 28px;
+	border-radius: 3px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	margin: 5px 10px;
+	float: left;
+}
+.button a:hover{
+	transition: all 0.9s case-in-out;
+	box-shadow: 0 0 9px gray;
+}
+.button .btn_default{
+  	color: #333;
+  	background-color: #fff;
+  	border-color: #ccc;
+}
+.button .btn_success{
+  	color: #fff;
+  	background-color: #5cb85c;
+  	border-color: #4cae4c;
+}
+.button .btn_danger{
+  	color: #fff;
+	background-color: #d9534f;
+	border-color: #d43f3a;
+}
+.button .btn_info{
+  	color: #fff;
+	background: #5bc0de;
+  	border-color: #46b8da;
+}
+.button .btn_warning{
+  	color: #fff;
+ 	background-color: #f0ad4e;
+  	border-color: #eea236;
+}
+.button .btn_primary{
+  	color: #fff;
+	background: #337ab7;
+  	border-color: #2e6da4;
+}
+
+.footer{
+  	padding: 30px;
+  	text-align: center;
+}
+.footer .link{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	display: block;
+}
+.footer .link a{
+	text-decoration: none;/*去掉下划线*/
+	margin: 0 10px;
+}
+.footer .copyright{
+  	margin: 10px 0;
+	font-size: 14px;
+	font-family: "arial";
+}

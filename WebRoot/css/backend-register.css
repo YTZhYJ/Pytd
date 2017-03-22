@@ -1,0 +1,94 @@
+/*Login Layout CSS*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+img{
+	border: 0px;
+}
+.register_header{
+	width: 990px;
+	height: 60px;
+	margin: 10 auto;
+	padding: 10px 0;
+	border: 1px solid;
+	border-radius: 3px;
+}
+.register_body{
+	width: 890px;
+	height: 498px;
+	background: #DCDCDC;
+	margin: 80 auto;
+	border: 1px solid;
+	border-radius: 6px;
+}
+.reg_body_head{
+	width: 890px;
+	height: 48px;
+	background: #DCDCDC;
+	margin: 0 auto;
+	border-radius: 6px;
+}
+.reg_body_head span{
+	padding: 8px;
+	margin: 0 auto;
+	float: auto;
+	line-height:20px; 
+	text-align:center; 
+	display:block;
+}
+
+.reg_body_head a{
+	width: 30px;
+	height: 12px;
+	color: green;
+	text-decoration: none;/*去掉下划线*/
+	text-align: center;
+	border-radius: 3px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	margin: 5px 10px;
+	cursor: pointer;
+}
+
+.reg_body_form{
+	width: 400px;
+	height: 398px;
+	margin: 0 auto;
+	padding-top: 20px ;
+	float: auto;
+	background: #C0C0C0;
+	border-radius: 6px;
+}
+.reg_body_form table tr{
+	height: 40px;
+	border: 1px solid red;
+	text-align: right; 
+}
+.reg_body_form table th{
+	width: 128px;
+	font-size: 14px;
+	vertical-align: center;
+}
+.reg_body_form table td{
+	width: 248px;
+	font-size: 14px;
+	vertical-align: top;
+}
+
+.reg_body_form input{
+	width: 240px;
+	height: 33px;
+	padding: 1px;
+	margin: 1 auto;
+	float: auto;
+	line-height:20px; 
+	text-align: left; 
+	display:block;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.reg_body_form .center{
+	width: 120px;
+	margin: 10 auto;
+}
