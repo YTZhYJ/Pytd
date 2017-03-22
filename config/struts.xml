@@ -35,14 +35,12 @@
 			<result name="login">/login.jsp</result>
 		</global-results>
 		
-		
-		
-        <action name="authAction" class="com.pytd.db.action.AuthUserAction" method="{1}">
-    		<result name="error">/register.jsp</result>
-    	</action>
-		
+    </package>
+    
+    <package name="action" namespace="/" extends="interceptor">
+    
        	<!-- 登录部分 -->
-       	<action name="loginAction" class="AuthUserLoginAction" method="execute">
+       	<action name="loginAction" class="com.pytd.db.action.AuthUserLoginAction" method="login">
         	<result name="success" type="redirect">iframePages/index.jsp</result>
        		<result name="error" type="redirect">/login.html</result>
        	</action>
@@ -50,7 +48,7 @@
         	<result name="success" type="redirect">/login.html</result>
         </action>  
         
+        
     </package>
-    
     
 </struts>    

@@ -2,6 +2,7 @@ package com.pytd.db.dao;
 
 import java.util.List;
 
+import com.pytd.db.entity.AuthUser;
 import com.pytd.db.entity.Message;
 
 /**
@@ -12,25 +13,19 @@ import com.pytd.db.entity.Message;
  */
 public interface MessageDao {
 
-    public boolean checkMessage(Message message);
-    public boolean checkMessageById(Long id);
-
-    // 添加
-    public boolean addMessage(Message message);
-
-    // 删除
-    public boolean deleteMessageById(Long id);
-
-    // 修改信息
-    public boolean updateMessage(Message message);
-    public boolean updateMessageById(Long id);
+    public List<Message> getMessageAll();
+    
+    public Message getMessageById(Long id);
+    
+    public List<Message> getMessageByTitle(String title);
+    
+    public List<Message> getMessageByFuzzy(String fuzzy);
+    
+    public List<Message> getMessageByAuthUser(AuthUser authUser);
+    
     public void saveOrUpdate(Message message);
-
-    // 查询
-    public List<Message> queryMessage(Message message);
-    public Message queryMessageById(Long id);
-    public List<Message> queryMessageByFuzzy(Object obj);//模糊查询
-
-    // 查询所有
-    public List<Message> queryAll();
+    
+    public void deleteMessageById(Long id);
+    
+    
 }

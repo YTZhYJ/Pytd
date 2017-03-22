@@ -13,7 +13,7 @@
   <body>
 	<!-- Sign in  -->
    	<div class="login_header">
-   		<img alt="Logo标志" src="images/logo-201305.png" height="60" width="270">
+   		<img alt="Logo标志" src="images/logo.png" height="60" width="270">
    	</div>
    	<div class="login_body">
    		<div class="login_body_left">
