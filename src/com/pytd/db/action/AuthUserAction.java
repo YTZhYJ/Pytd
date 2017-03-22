@@ -15,8 +15,7 @@ public class AuthUserAction {
 	}
 	
 	public AuthUser getAuthUserById(Long id){
-		AuthUser authUser = (AuthUser) authUserBiz.queryById(id);
-		return authUser;
+		return null;
 	}
 	
 }

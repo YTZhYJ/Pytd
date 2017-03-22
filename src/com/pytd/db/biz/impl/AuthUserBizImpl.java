@@ -3,7 +3,7 @@ package com.pytd.db.biz.impl;
 import com.pytd.db.biz.AuthUserBiz;
 import com.pytd.db.dao.AuthUserDao;
 
-public class AuthUserBizImpl extends CommonlyBizImpl<AuthUserDao> implements AuthUserBiz {
+public class AuthUserBizImpl implements AuthUserBiz {
 	
 	private AuthUserDao authUserDao ;
 

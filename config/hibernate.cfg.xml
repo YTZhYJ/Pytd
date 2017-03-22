@@ -6,13 +6,6 @@
 <hibernate-configuration>
 
     <session-factory>
-        <property name="hbm2ddl.auto">update</property>
-        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="connection.url">jdbc:MySQL://localhost:3306/gypsophila</property>
-        <property name="connection.username">root</property>
-        <property name="connection.driver_class">org.gjt.mm.mysql.Driver</property>
-    
-
 		<!-- 是否显示及格式化 SQL -->
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
