@@ -1,14 +1,13 @@
 package com.pytd.db.entity;
 /**
- * 基础表：性别实体类
- * 
+ * 基础表：学历
  * @author zhang
  *
  */
-public class DictGender {
-	private Long id;                   //性别ID
-	private String name_EN;            //性别英文说明
-	private String name_CN;            //性别中文说明
+public class DictEducation {
+	private Long id;                   //学历ID
+	private String name_EN;            //学历英文说明
+	private String name_CN;            //学历中文说明
 	private String descr;              //描述
 	public Long getId() {
 		return id;
@@ -35,4 +34,5 @@ public class DictGender {
 		this.descr = descr;
 	}
 	
+
 }

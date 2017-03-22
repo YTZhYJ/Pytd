@@ -5,4 +5,4 @@
  * @author zhang
  *
  */
-package com.pytd.base;
+package com.pytd.db.entity.hbmxml;

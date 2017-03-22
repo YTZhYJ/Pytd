@@ -3,7 +3,7 @@
 genVersionTag=false
 sessionFactoryName=com.pytd.main.HibernateSessionFactory
 genAnnotations=false
-configFile=/Gypsophila/config/hibernate.cfg.xml
+configFile=/Pytd/config/hibernate.cfg.xml
 reStrategyClass=
 sessionFactoryId=
 profile=

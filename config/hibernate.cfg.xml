@@ -13,18 +13,14 @@
 		<!-- 生成数据表的策略 -->
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<!-- 配置 hibernate 映射文件 	-->
-		<mapping resource="com/pytd/db/entity/hibernatexml/AuthGroup.hbm.xml" />
-		<mapping resource="com/pytd/db/entity/hibernatexml/AuthPermission.hbm.xml" />
-		<mapping resource="com/pytd/db/entity/hibernatexml/AuthPermission2Group.hbm.xml" />
-		<mapping resource="com/pytd/db/entity/hibernatexml/AuthUser.hbm.xml" />
-		<mapping resource="com/pytd/db/entity/hibernatexml/AuthUser2Group.hbm.xml" />
-		<mapping resource="com/pytd/db/entity/hibernatexml/ClientUser.hbm.xml"/>
-		<mapping resource="com/pytd/db/entity/hibernatexml/Contact.hbm.xml"/>
-		<mapping resource="com/pytd/db/entity/hibernatexml/DictDepartment.hbm.xml"/>
-		<mapping resource="com/pytd/db/entity/hibernatexml/DictGender.hbm.xml" />
-		<mapping resource="com/pytd/db/entity/hibernatexml/DictSequence.hbm.xml" />
-		<mapping resource="com/pytd/db/entity/hibernatexml/Message.hbm.xml" />
-		<mapping resource="com/pytd/db/entity/hibernatexml/ModuleMenu.hbm.xml" />
+		<mapping resource="com/pytd/db/entity/hbmxml/AuthUser.hbm.xml" />
+		<mapping resource="com/pytd/db/entity/hbmxml/DictCategory.hbm.xml"/>
+		<mapping resource="com/pytd/db/entity/hbmxml/DictDepartment.hbm.xml"/>
+		<mapping resource="com/pytd/db/entity/hbmxml/DictEducation.hbm.xml"/>
+		<mapping resource="com/pytd/db/entity/hbmxml/DictGender.hbm.xml" />
+		<mapping resource="com/pytd/db/entity/hbmxml/DictNationality.hbm.xml"/>
+		<mapping resource="com/pytd/db/entity/hbmxml/DictSequence.hbm.xml" />
+		<mapping resource="com/pytd/db/entity/hbmxml/Message.hbm.xml" />
     </session-factory>
 
 </hibernate-configuration>
