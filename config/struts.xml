@@ -13,7 +13,7 @@
     <constant name="struts.devMode" value="true" />
     
     <!-- 拦截器包 -->
-    <package name="interceptor"  namespace="/" extends="struts-default">
+    <package name="interceptor"  namespace="/auth/" extends="struts-default">
 		<!-- 定义新的拦截器 -->
 		<interceptors>
 			<!--定义新的拦截器 -->
@@ -37,18 +37,13 @@
 		
     </package>
     
-    <package name="action" namespace="/" extends="interceptor">
-    
-       	<!-- 登录部分 -->
-       	<action name="loginAction" class="com.pytd.db.action.AuthUserLoginAction" method="login">
-        	<result name="success" type="redirect">iframePages/index.jsp</result>
-       		<result name="error" type="redirect">/login.html</result>
-       	</action>
-        <action name="logoutAction" class="loginaction" method="logout">
-        	<result name="success" type="redirect">/login.html</result>
-        </action>  
-        
-        
+    <package name="action" namespace="/auth/" extends="interceptor">
+    	<action name="login" class="com.pytd.db.action.auth.AuthUserAction" method="login">
+    		<result name="error" type="redirectAction">
+    			<param name="namespace">/auth/</param>
+    			<param name="actionName">login</param>
+    		</result>
+    	</action>
     </package>
     
 </struts>    

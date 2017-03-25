@@ -1,4 +1,4 @@
-/views/basic/sex-list.jsp<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" errorPage="500-error.jsp"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" errorPage="500-error.jsp"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -9,7 +9,7 @@
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="起始页面">
-	<%@ include file="/import/import_js.html" %>
+	<%@ include file="/static/include_js.html" %>
   </head>
   <body>
   	<div class="register_header">
@@ -61,6 +61,6 @@
 	  		</div>
 	  	</div>
   	</form>
-  	<%@ include file="/common/import_footer.jsp" %>
+  	<%@ include file="/static/footer.jsp" %>
   </body>
 </html>

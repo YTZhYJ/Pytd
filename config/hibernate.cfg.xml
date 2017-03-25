@@ -6,6 +6,7 @@
 <hibernate-configuration>
 
     <session-factory>
+		<property name="hibernate.current_session_context_class">thread</property>
 		<!-- 是否显示及格式化 SQL -->
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>

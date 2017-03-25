@@ -12,10 +12,11 @@ public class Message {
 
 	private Long id;                       //信息的ID
 	private String title;                  //消息标题
-	private DictSequence sequence;             //消息顺序
+	private DictSequence sequence;         //消息顺序
 	private String content;                //消息内容
 	private Date releaseTime;              //发布时间
-	private AuthUser operator;                 //操作人员
+	private DictCategory category;         //消息类别
+	private AuthUser operator;             //操作人员
 	private String attachment;             //附件
 	
 	public Long getId() {
@@ -59,6 +60,12 @@ public class Message {
 	}
 	public void setAttachment(String attachment) {
 		this.attachment = attachment;
+	}
+	public DictCategory getCategory() {
+		return category;
+	}
+	public void setCategory(DictCategory category) {
+		this.category = category;
 	}
 	
 }

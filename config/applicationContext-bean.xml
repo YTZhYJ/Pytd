@@ -13,6 +13,8 @@
 	
 	<!-- 配置Dao基础数据库层 -->
 	<bean id="authUserDao" class="com.pytd.db.dao.impl.AuthUserDaoImpl"></bean>
+	<bean id="messageDao" class="com.pytd.db.dao.impl.MessageDaoImpl"></bean>
+	<bean id="categoryDao" class="com.pytd.db.dao.impl.DictCategoryDaoImpl"></bean>
 	
 	
 	
@@ -21,6 +23,12 @@
 	<bean id="authUserBiz" class="com.pytd.db.biz.impl.AuthUserBizImpl">
 		<property name="authUserDao" ref="authUserDao"></property>
 	</bean>
+	<bean id="messageBiz" class="com.pytd.db.biz.impl.MessageBizImpl">
+		<property name="messageDao" ref="messageDao"></property>
+		<property name="categroyDao" ref="categoryDao"></property>
+	</bean>
+	
+	
 	
 	
 	
@@ -28,6 +36,10 @@
 	<bean id="authUserAction" class="com.pytd.db.action.auth.AuthUserAction">
 		<!-- property 的name相当于get方法， ref指向是指Service的bean中的id值-->
 		<property name="authUserBiz" ref="authUserBiz"></property>
+	</bean>
+	<bean id="messageViewAction" class="com.pytd.db.action.business.MessageViewAction">
+		<!-- property 的name相当于get方法， ref指向是指Service的bean中的id值-->
+		<property name="messageBiz" ref="messageBiz"></property>
 	</bean>
 	
 </beans>

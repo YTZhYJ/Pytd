@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 
 import com.pytd.db.dao.MessageDao;
 import com.pytd.db.entity.AuthUser;
+import com.pytd.db.entity.DictCategory;
 import com.pytd.db.entity.Message;
 
 /**
@@ -35,6 +36,12 @@ public class MessageDaoImpl implements MessageDao {
 			e.printStackTrace();
 		}
 		return list;
+	}
+
+	@Override
+	public List<Message> getMessageByCategory(DictCategory category) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	@Override
@@ -91,6 +98,13 @@ public class MessageDaoImpl implements MessageDao {
 
 	@Override
 	public void deleteMessageById(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void deleteMessageByCategory(DictCategory category) {
 		// TODO Auto-generated method stub
 		
 	}
