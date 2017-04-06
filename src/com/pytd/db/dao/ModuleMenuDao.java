@@ -8,6 +8,10 @@ public interface ModuleMenuDao {
 
 	public List<ModuleMenu> getModuleMenuAll();
 	
+	public List<ModuleMenu> getFrontedModuleMenu();
+	
+	public List<ModuleMenu> getBackendModuleMenu();
+	
 	public List<ModuleMenu> getModuleMenuByViewable(Boolean viewable);
 	
 	public ModuleMenu getModuleMenuById(Long id);

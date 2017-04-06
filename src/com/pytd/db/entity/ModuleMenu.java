@@ -8,12 +8,26 @@ package com.pytd.db.entity;
 public class ModuleMenu {
 
 	private Long id;                      //菜单模块ID
-	private ModuleMenu father;           //上一级菜单项
+	private ModuleMenu father;            //上一级菜单项
 	private String url;                   //本级菜单的URL
 	private String name_CN;               //中文名称
 	private String name_EN;               //英文名称
 	private String sequence;              //顺序排序
+	private Boolean isFronted;            //前端菜单
+	private Boolean isBackend;            //前端菜单
 	private Boolean viewable;             //是否可见
+	public Boolean getIsFronted() {
+		return isFronted;
+	}
+	public void setIsFronted(Boolean isFronted) {
+		this.isFronted = isFronted;
+	}
+	public Boolean getIsBackend() {
+		return isBackend;
+	}
+	public void setIsBackend(Boolean isBackend) {
+		this.isBackend = isBackend;
+	}
 	public Long getId() {
 		return id;
 	}

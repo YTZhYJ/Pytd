@@ -11,6 +11,8 @@
   		<property column="url" generated="never" lazy="false" name="url" type="string"></property>
   		<property column="name_EN" generated="never" lazy="false" name="name_EN" type="string"></property>
 		<property column="name_CN" name="name_CN" generated="never" lazy="false" type="string"></property>
+		<property column="isFronted" name="isFronted" generated="never" lazy="false" type="boolean"></property>
+		<property column="isBackend" name="isBackend" generated="never" lazy="false" type="boolean"></property>
 		<property column="sequence" generated="never" lazy="false" name="sequence" type="string"></property>	
 		<property column="viewable" generated="never" lazy="false" name="viewable" type="boolean"></property>
 		

@@ -1,5 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8" errorPage="True"%>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -21,6 +20,6 @@
   	</div>
   	<br>
     This is my JSP page. <br>
-  	<%@ include file="/static/footer.jsp"%>
   </body>
+  	<%@ include file="/static/footer.jsp"%>
 </html>

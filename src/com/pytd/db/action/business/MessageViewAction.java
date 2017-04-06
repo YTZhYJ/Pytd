@@ -29,6 +29,8 @@ public class MessageViewAction {
 		List<Message> list = null;
 		
 		//
+		list = messageBiz.getMessageByCategroy(category);
+		
 		
 		return list;
 	}

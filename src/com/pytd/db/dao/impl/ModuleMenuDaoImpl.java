@@ -96,5 +96,30 @@ public class ModuleMenuDaoImpl implements ModuleMenuDao {
 		sessionFactory.getCurrentSession().save(moduleMenu);  	
 	}
 
+	@Override
+	public List<ModuleMenu> getFrontedModuleMenu() {
+		List<ModuleMenu> list = null;
+		System.out.println("####");
+//		System.out.println("****"+sessionFactory.getCurrentSession()+"*");
+		String hql = "FROM ModuleMenu a where a.isFronted = ? AND a.viewable = ?";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		System.out.println("########");
+		query.setParameter(0, true);
+		query.setParameter(1, true);
+		list = query.list();
+		return list;
+	}
+
+	@Override
+	public List<ModuleMenu> getBackendModuleMenu() {
+		List<ModuleMenu> list = null;
+		String hql = "FROM ModuleMenu a where a.isBackend = ? AND a.viewable = ? ";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setParameter(0, true);
+		query.setParameter(1, true);
+		list = query.list();
+		return list;
+	}
+
 	
 }

@@ -1,4 +1,4 @@
-package com.pytd.db.action;
+package com.pytd.db.action.auth;
 
 import java.util.Map;
 

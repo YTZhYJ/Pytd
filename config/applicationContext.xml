@@ -11,7 +11,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd" xmlns:tx="http://www.springframework.org/schema/tx"
 		default-autowire="byName">
 	<!-- 自动扫描 -->
-	<context:component-scan base-package="com.pytd.*" />
+	<!-- <context:component-scan base-package="com.pytd.*" /> -->
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"        
         destroy-method="close">       
@@ -28,10 +28,11 @@
 			value="classpath:hibernate.cfg.xml">
 		</property>
 	</bean>
-	<!-- <bean id="transactionManager"
+	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-	</bean> -->
-	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+		<property name= "sessionFactory" ref="sessionFactory" />
+	</bean> 
+	<tx:annotation-driven transaction-manager="transactionManager" />
 	
 	<!-- 配置事务  -->
 	<bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
@@ -41,8 +42,7 @@
 	<tx:advice id="txAdvice" transaction-manager="txManager">
 		<!-- 定义事务规则 -->
 		<tx:attributes>
-			<tx:method name="find*" read-only="true"/>
-			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="get*" read-only="true"/>
 			<tx:method name="add*" propagation="REQUIRED"/>
 			<tx:method name="delete*" propagation="REQUIRED"/>
 			<tx:method name="*" propagation="REQUIRED" read-only="true"/>

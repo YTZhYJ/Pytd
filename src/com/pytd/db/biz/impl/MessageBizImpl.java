@@ -3,6 +3,7 @@ package com.pytd.db.biz.impl;
 import java.util.List;
 
 import com.pytd.db.biz.MessageBiz;
+import com.pytd.db.dao.DictCategoryDao;
 import com.pytd.db.dao.MessageDao;
 import com.pytd.db.entity.AuthUser;
 import com.pytd.db.entity.DictCategory;
@@ -11,7 +12,7 @@ import com.pytd.db.entity.Message;
 public class MessageBizImpl implements MessageBiz {
 
 	MessageDao messageDao;
-	DictCategory categroyDao;
+	DictCategoryDao categoryDao;
 	
 	public MessageDao getMessageDao() {
 		return messageDao;
@@ -21,12 +22,12 @@ public class MessageBizImpl implements MessageBiz {
 		this.messageDao = messageDao;
 	}
 
-	public DictCategory getCategroyDao() {
-		return categroyDao;
+	public DictCategoryDao getCategoryDao() {
+		return categoryDao;
 	}
 
-	public void setCategroyDao(DictCategory categroyDao) {
-		this.categroyDao = categroyDao;
+	public void setCategoryDao(DictCategoryDao categoryDao) {
+		this.categoryDao = categoryDao;
 	}
 
 	@Override
